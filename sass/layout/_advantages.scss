@@ -1,0 +1,102 @@
+@media screen and(min-width: 480px) {
+  .advantages {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.advantages .section-title {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.advantages p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.advantages .section-title {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+// @media screen and (min-width: 768px) {
+//   .advantages li:nth-child(odd) {
+//     margin-right: 30px;
+//   }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .advantages li:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
+
+@media screen and (min-width: 480px) {
+  .container .advantages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container .advantages {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.icon-antenna::before {
+  content: "";
+  height: 120px;
+  display: block;
+
+  background-color: $grey-bg-color;
+  background-image: url("../images/images-png/antenna.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-astronaut::before {
+  content: "";
+  height: 120px;
+  display: block;
+
+  background-color: $grey-bg-color;
+  background-image: url("../images/images-png/astronaut.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-clock::before {
+  content: "";
+  height: 120px;
+  display: block;
+
+  background-color: $grey-bg-color;
+  background-image: url("../images/images-png/clock.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-diagram::before {
+  content: "";
+  height: 120px;
+  display: block;
+
+  background-color: $grey-bg-color;
+  background-image: url("../images/images-png/diagram.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

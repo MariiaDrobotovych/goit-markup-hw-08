@@ -1,0 +1,163 @@
+// footer {
+//   background-color: $secondary-bg-color;
+// }
+
+// footer .container {
+//   display: flex;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+// }
+
+// footer .logo {
+//   display: inline-block;
+//   margin-top: 0px;
+//   margin-bottom: 20px;
+
+//   font-style: normal;
+// }
+
+// footer .address {
+//   padding-left: 0px;
+// }
+
+// .address-list:not(:last-child) {
+//   margin-bottom: 9px;
+// }
+
+// .address .link-address {
+//   color: $main-bg-color;
+// }
+
+// .address .link {
+//   color: rgba(22, 15, 15, 0.8);
+// }
+
+// .address .address-start {
+//   color: $main-bg-color;
+// }
+
+// .address .address-end {
+//   color: rgba(255, 255, 255, 0.6);
+// }
+
+// .social-links-footer {
+//   margin-right: 93px;
+// }
+
+// .social-links-footer .phrase {
+//   text-transform: uppercase;
+//   color: $main-bg-color;
+//   font-size: 14px;
+// }
+
+// .social-links-footer .sl-thumb {
+//   width: 44px;
+//   height: 44px;
+//   border-radius: 50%;
+
+//   &:not(:last-child) {
+//     margin-right: 10px;
+//   }
+// }
+
+// .address-bottom {
+//   margin-right: 70px;
+// }
+
+// .address-bottom .address {
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+
+//   font-size: 14px;
+//   line-height: 24px;
+// }
+
+// .sl-footer {
+//   display: flex;
+//   margin-top: 20px;
+// }
+
+// .sl-footer svg {
+//   width: 20px;
+//   height: 20px;
+//   fill: $main-bg-color;
+// }
+
+// .sl-footer a {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 44px;
+//   height: 44px;
+//   background-color: rgba(255, 255, 255, 0.1);
+//   border-radius: 50%;
+
+//   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &:focus,
+//   &:hover {
+//     background-color: $text-accent;
+//   }
+// }
+
+// .footer-form {
+//   display: flex;
+//   align-items: flex-end;
+//   justify-content: space-between;
+//   width: 570px;
+//   height: 86px;
+// }
+
+// .footer-form .form-field {
+//   margin-bottom: 0;
+// }
+
+// .footer-form .footer-input {
+//   display: block;
+//   padding: 15px 16px;
+//   width: 358px;
+//   height: 50px;
+
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   box-sizing: border-box;
+//   background-color: $secondary-bg-color;
+//   border-radius: 4px;
+//   color: $main-bg-color;
+// }
+
+// .footer-form .footer-icon {
+//   position: absolute;
+//   right: 28px;
+//   top: 13px;
+//   width: 24px;
+//   height: 24px;
+//   fill: $main-bg-color;
+// }
+
+// .footer-form-phrase {
+//   display: block;
+//   margin-bottom: 20px;
+//   text-transform: uppercase;
+
+//   color: $main-bg-color;
+//   font-size: 14px;
+//   font-weight: 700;
+// }
+
+// .footer-btn {
+//   position: relative;
+//   width: 200px;
+//   height: 50px;
+//   padding: 10px 62px 10px 29px;
+
+//   background-color: $text-accent;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   border-radius: 4px;
+//   cursor: pointer;
+
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 30px;
+//   letter-spacing: 0.06em;
+//   color: $main-bg-color;
+// }

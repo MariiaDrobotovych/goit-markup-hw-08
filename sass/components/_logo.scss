@@ -1,0 +1,19 @@
+.logo {
+  color: #000000;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  &:hover {
+    color: $text-accent;
+  }
+}
+
+.logo-start {
+  color: $text-accent;
+}
+
+.logo-end {
+  color: $main-bg-color;
+}
