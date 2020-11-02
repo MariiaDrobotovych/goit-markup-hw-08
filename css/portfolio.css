@@ -40,6 +40,10 @@ body {
   font-size: 18px;
 }
 
+img {
+  display: block;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
