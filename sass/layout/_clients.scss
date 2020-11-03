@@ -1,54 +1,97 @@
-// .clients .section-title {
-//   margin-top: 0px;
-//   margin-bottom: 50px;
+.clients .section-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-weight: 700px;
+  font-size: 28px;
+  line-height: 33px;
 
-//   font-weight: 700px;
-//   font-size: 36px;
-//   line-height: 42px;
-//   text-align: center;
-//   letter-spacing: 0.03em;
-// }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
 
-// .clients .container {
-//   padding-top: 94px;
-//   padding-bottom: 94px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .clients .container {
+    padding-top: 44px;
+    padding-bottom: 60px;
+  }
+}
 
-//   padding-right: 15px;
-//   padding-left: 15px;
-// }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
-// .clients .list {
-//   display: flex;
-//   justify-content: space-between;
-// }
+@media screen and (min-width: 1200px) {
+  .clients .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
-// .clients .list a {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+.clients .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-//   width: 170px;
-//   height: 90px;
+.clients .list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-//   background-color: $main-bg-color;
-//   border: 2px solid #afb1b8;
-//   border-radius: 4px;
+  background-color: $main-bg-color;
+  border: 2px solid #afb1b8;
+  border-radius: 4px;
 
-//   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//   &:focus,
-//   &:hover {
-//     border: 2px solid $text-accent;
-//   }
-// }
+  &:focus,
+  &:hover {
+    border: 2px solid $text-accent;
+  }
+}
 
-// .clients-pic svg {
-//   fill: #afb1b8;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .clients .list a {
+    width: 210px;
+    height: 90px;
+  }
+}
 
-//   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients .list a {
+    width: 226px;
+    height: 90px;
+  }
+}
 
-// .clients-pic:hover svg,
-// .clients-pic:focus svg {
-//   fill: $text-accent;
-// }
+@media screen and (min-width: 1200px) {
+  .clients .list a {
+    width: 170px;
+    height: 90px;
+  }
+}
+
+@media screen and(min-width: 480px) and (max-width: 767px) {
+  .clients .list li:nth-last-child(n + 3) {
+    margin-bottom: 30px;
+  }
+}
+
+.clients-pic svg {
+  fill: #afb1b8;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-pic:hover svg,
+.clients-pic:focus svg {
+  fill: $text-accent;
+}
