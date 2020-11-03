@@ -83,6 +83,26 @@
   .clients .list li:nth-last-child(n + 3) {
     margin-bottom: 30px;
   }
+
+  .clients .list li:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients .list li:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  .clients .list li:nth-last-child(n + 4) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .clients .list li:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .clients-pic svg {
