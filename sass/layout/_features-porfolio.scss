@@ -1,15 +1,3 @@
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .features {
-    padding: 60px 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features {
-    padding: 94px 0;
-  }
-}
-
 .features .list {
   display: flex;
   justify-content: center;
@@ -31,6 +19,12 @@
 
 .features li:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .features li:nth-last-child(n + 2) {
+    margin-bottom: 15px;
+  }
 }
 
 .features button {
