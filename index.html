@@ -20,12 +20,21 @@
   </head>
 
   <body>
-    <!-- <header class="header-page">
+    <header class="header-page">
       <div class="container">
         <nav>
           <a href="./index.html" class="logo link"
             ><span class="logo-start">Web</span>Studio</a
           >
+
+          <div class="menu-mobile">           
+            <button type="button" class="menu-button">
+              <svg width="40" height="40">
+                <use href="./images/sprite-svg/sprite.svg#icon-menu-button"></use>
+                <use href="./images/sprite-svg/sprite.svg#icon-close-button"></use>
+              </svg>
+            </button>
+          </div>
 
           <ul class="site-nav list">
             <li><a href="" class="link current">Студия</a></li>
@@ -59,7 +68,7 @@
           </ul>
         </address>
       </div>
-    </header> -->
+    </header>
 
     <main>
       <section class="hero">
@@ -106,50 +115,52 @@
         </div>
       </section>
 
-      <!-- <section class="section">
+      <section class="section">
         <div class="container works">
           <h2 class="section-title">Чем мы занимаемся</h2>
 
           <ul class="work list">
             <li>
-              <img
+              <picture>
+                <source srcset="./images/images-box/box1.webp 1x, ./images/images-box/box1@2x.webp 2x" media="(min-width:1200px)" type="image-webp">
+                <source srcset="./images/images-box/box1.jpg 1x, ./images/images-box/box1@2x.jpg 2x" media="(min-width:1200px)"> 
+                <img
                 class="works-img"
                 src="./images/images-box/box1.jpg"
-                alt=""
+                alt="декстопные приложения"
                 width="370"
                 height="294"
-              />
+                />
+              </picture>
               <div class="work-title">
                 <p>декстопные приложения</p>
               </div>
             </li>
             <li>
-              <img
-                class="works-img"
-                src="./images/images-box/box2.jpg"
-                alt=""
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source srcset="./images/images-box/box12.webp 1x, ./images/images-box/box2@2x.webp 2x" media="(min-width:1200px)"
+                  type="image-webp">
+                <source srcset="./images/images-box/box2.jpg 1x, ./images/images-box/box2@2x.jpg 2x" media="(min-width:1200px)"> 
+                <img class="works-img" src="./images/images-box/box2.jpg" alt="мобильные приложения" width="370" height="294" />
+              </picture>
               <div class="work-title">
                 <p>мобильные приложения</p>
               </div>
             </li>
             <li>
-              <img
-                class="works-img"
-                src="./images/images-box/box3.jpg"
-                alt=""
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source srcset="./images/images-box/box3.webp 1x, ./images/images-box/box3@2x.webp 2x" media="(min-width:1200px)"
+                  type="image-webp">
+                <source srcset="./images/images-box/box3.jpg 1x, ./images/images-box/box3@2x.jpg 2x" media="(min-width:1200px)"> 
+                <img class="works-img" src="./images/images-box/box3.jpg" alt="дизайнерские решения" width="370" height="294" />
+              </picture>
               <div class="work-title">
                 <p>дизайнерские решения</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <section class="section staff-section">
         <div class="container staff-wrap">
