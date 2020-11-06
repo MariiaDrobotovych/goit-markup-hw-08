@@ -7,10 +7,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-
-  @media screen and (min-width: 768px) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .header-page > .container {
@@ -42,6 +39,10 @@
   display: none;
 }
 
+.menu-nav.is-open {
+  display: block;
+}
+
 .menu-nav {
   display: none;
   position: absolute;
@@ -67,10 +68,6 @@
     height: 80px;
     box-shadow: none;
   }
-}
-
-.is-open .menu-nav {
-  display: block;
 }
 
 .header-page .address .link {
@@ -202,6 +199,7 @@
 .header-page .address {
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
     margin-right: 0px;
