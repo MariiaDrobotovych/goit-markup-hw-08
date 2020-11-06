@@ -133,6 +133,7 @@ img {
 
 @media screen and (min-width: 767px) {
   .menu-nav {
+    display: block;
     position: static;
     flex-direction: row;
     padding: 0px;
