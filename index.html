@@ -23,50 +23,44 @@
     <header class="header-page">
       <div class="container">
         <nav>
+
           <a href="./index.html" class="logo link"
             ><span class="logo-start">Web</span>Studio</a
-          >
-
-          <div class="menu-mobile">           
-            <button type="button" class="menu-button">
+          >           
+          <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-nav" data-menu-button>
               <svg width="40" height="40">
-                <use href="./images/sprite-svg/sprite.svg#icon-menu-button"></use>
-                <use href="./images/sprite-svg/sprite.svg#icon-close-button"></use>
+                <use class="icon-menu-btn" href="./images/sprite-svg/sprite.svg#icon-menu-button"></use>
+                <use class="icon-close-btn" href="./images/sprite-svg/sprite.svg#icon-close-button"></use>
               </svg>
-            </button>
+          </button>
+
+          <div class="menu-nav is-open" id="menu-nav" data-menu>
+            <ul class="site-nav list">
+              <li><a href="" class="link current">Студия</a></li>
+              <li><a href="./portfolio.html" class="link">Портфолио</a></li>
+              <li><a href="" class="link">Контакты</a></li>
+            </ul>
+
+            <address class="address top">
+              <ul class="contact list">
+                <li class="address-list-top">
+                  <a href="mailto:info@devstudio.com" class="link">
+                    <svg class="icon-envelope">
+                    <use href="./images/sprite-svg/sprite.svg#icon-envelope"></use>
+                    </svg>
+                  info@devstudio.com</a>
+                </li>
+                <li class="address-list-top">
+                <a href="tel:+380961111111" class="link">
+                  <svg class="icon-smartphone">
+                    <use href="./images/sprite-svg/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a>
+              </li>
+            </ul>
+            </address>
           </div>
-
-          <ul class="site-nav list">
-            <li><a href="" class="link current">Студия</a></li>
-            <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li><a href="" class="link">Контакты</a></li>
-          </ul>
         </nav>
-
-        <address class="address top">
-          <ul class="contact list">
-            <li class="address-list-top">
-              <a href="mailto:info@devstudio.com" class="link">
-                <svg class="icon-envelope">
-                  <use
-                    href="./images/sprite-svg/sprite.svg#icon-envelope"
-                  ></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="address-list-top">
-              <a href="tel:+380961111111" class="link">
-                <svg class="icon-smartphone">
-                  <use
-                    href="./images/sprite-svg/sprite.svg#icon-smartphone"
-                  ></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
       </div>
     </header>
 
@@ -169,10 +163,15 @@
           <div class="staff-list">
             <ul class="staff list">
               <li class="staff-people">
-                <img
-                  src="./images/images-person/person1.jpg"
-                  alt="Игорь Демьяненко"
-                />
+                <picture>
+                  <source srcset="./images/images-person/person1-desktop.webp 1x, ./images/images-person/person1-desktop@2x.webp 2x" media=(min-width:1200px) type="image/webp">
+                  <source srcset="./images/images-person/person1-desktop.jpg 1x, ./images/images-person/person1-desktop@2x.jpg 2x" media=(min-width:1200px)>
+                  <source srcset="./images/images-person/person1-tablet.webp 1x, ./images/images-person/person1-tablet@2x.webp 2x" media=(min-width:768px) type="image/webp">
+                  <source srcset="./images/images-person/person1-tablet.jpg 1x, ./images/images-person/person1-tablet@2x.jpg 2x" media=(min-width:768px)>
+                  <source srcset="./images/images-person/person1-mobile.webp 1x, ./images/images-person/person1-mobile@2x.webp 2x" media=(min-width:480px) type="image-webp">
+                  <source srcset="./images/images-person/person1-mobile.jpg 1x, ./images/images-person/person1-mobile@2x.jpg 2x" media=(min-width:480px)>
+                    <img src="./images/images-person/person1-mobile.jpg" alt="Игорь Демьяненко" />
+                </picture>
                 <h3 class="section-title">Игорь Демьяненко</h3>
                 <p lang="en">Product Designer</p>
                 <div class="social-link">
@@ -207,10 +206,15 @@
                 </div>
               </li>
               <li class="staff-people">
-                <img
-                  src="./images/images-person/person2.jpg"
-                  alt="Ольга Репина"
-                />
+                <picture>
+                  <source srcset="./images/images-person/person2-desktop.webp 1x, ./images/images-person/person2-desktop@2x.webp 2x" media=(min-width:1200px) type="image/webp">
+                  <source srcset="./images/images-person/person2-desktop.jpg 1x, ./images/images-person/person2-desktop@2x.jpg 2x" media=(min-width:1200px)>
+                  <source srcset="./images/images-person/person2-tablet.webp 1x, ./images/images-person/person2-tablet@2x.webp 2x" media=(min-width:768px) type="image/webp">
+                  <source srcset="./images/images-person/person2-tablet.jpg 1x, ./images/images-person/person2-tablet@2x.jpg 2x" media=(min-width:768px)>
+                  <source srcset="./images/images-person/person2-mobile.webp 1x, ./images/images-person/person2-mobile@2x.webp 2x" media=(min-width:480px) type="image-webp">
+                  <source srcset="./images/images-person/person2-mobile.jpg 1x, ./images/images-person/person2-mobile@2x.jpg 2x" media=(min-width:480px)>
+                    <img src="./images/images-person/person2-mobile.jpg" alt="Ольга Репина" />
+                </picture>
                 <h3 class="section-title">Ольга Репина</h3>
                 <p lang="en">Frontend Developer</p>
                 <div class="social-link">
@@ -245,10 +249,15 @@
                 </div>
               </li>
               <li class="staff-people">
-                <img
-                  src="./images/images-person/person3.jpg"
-                  alt="Николай Тарасов"
-                />
+                <picture>
+                  <source srcset="./images/images-person/person3-desktop.webp 1x, ./images/images-person/person3-desktop@2x.webp 2x" media=(min-width:1200px) type="image/webp">
+                  <source srcset="./images/images-person/person3-desktop.jpg 1x, ./images/images-person/person3-desktop@2x.jpg 2x" media=(min-width:1200px)>
+                  <source srcset="./images/images-person/person3-tablet.webp 1x, ./images/images-person/person3-tablet@2x.webp 2x" media=(min-width:768px) type="image/webp">
+                  <source srcset="./images/images-person/person3-tablet.jpg 1x, ./images/images-person/person3-tablet@2x.jpg 2x" media=(min-width:768px)>
+                  <source srcset="./images/images-person/person3-mobile.webp 1x, ./images/images-person/person3-mobile@2x.webp 2x" media=(min-width:480px) type="image-webp">
+                  <source srcset="./images/images-person/person3-mobile.jpg 1x, ./images/images-person/person3-mobile@2x.jpg 2x" media=(min-width:480px)>
+                  <img src="./images/images-person/person3-mobile.jpg" alt="Николай Тарасов" />
+                </picture>
                 <h3 class="section-title">Николай Тарасов</h3>
                 <p lang="en">Marketing</p>
                 <div class="social-link">
@@ -283,10 +292,15 @@
                 </div>
               </li>
               <li class="staff-people">
-                <img
-                  src="./images/images-person/person4.jpg"
-                  alt="Михаил Ермаков"
-                />
+                <picture>
+                   <source srcset="./images/images-person/person4-desktop.webp 1x, ./images/images-person/person4-desktop@2x.webp 2x" media=(min-width:1200px) type="image/webp">
+                  <source srcset="./images/images-person/person4-desktop.jpg 1x, ./images/images-person/person4-desktop@2x.jpg 2x" media=(min-width:1200px)>
+                  <source srcset="./images/images-person/person4-tablet.webp 1x, ./images/images-person/person4-tablet@2x.webp 2x" media=(min-width:768px) type="image/webp">
+                  <source srcset="./images/images-person/person4-tablet.jpg 1x, ./images/images-person/person4-tablet@2x.jpg 2x" media=(min-width:768px)>
+                  <source srcset="./images/images-person/person4-mobile.webp 1x, ./images/images-person/person4-mobile@2x.webp 2x" media=(min-width:480px) type="image-webp">
+                  <source srcset="./images/images-person/person4-mobile.jpg 1x, ./images/images-person/person4-mobile@2x.jpg 2x" media=(min-width:480px)>
+                    <img src="./images/images-person/person4-mobile.jpg" alt="Михаил Ермаков" />
+                </picture>
                 <h3 class="section-title">Михаил Ермаков</h3>
                 <p lang="en">UI Designer</p>
                 <div class="social-link">
@@ -498,7 +512,7 @@
         </form>
       </div>
     </div>
-
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

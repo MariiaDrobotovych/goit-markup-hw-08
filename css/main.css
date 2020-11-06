@@ -69,13 +69,81 @@ img {
   }
 }
 
-nav {
+.header-page {
+  position: relative;
+}
+
+.header-page nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-page nav {
+    width: 100%;
+  }
 }
 
 .header-page > .container {
   display: flex;
+}
+
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  margin-left: 276px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-close-btn {
+  display: none;
+}
+
+.is-open .icon-close-btn {
+  display: block;
+}
+
+.is-open .icon-menu-btn {
+  display: none;
+}
+
+.menu-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  padding: 60px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 767px) {
+  .menu-nav {
+    position: static;
+    flex-direction: row;
+    padding: 0px;
+    height: 80px;
+    box-shadow: none;
+  }
+}
+
+.is-open .menu-nav {
+  display: block;
 }
 
 .header-page .address .link {
@@ -84,31 +152,41 @@ nav {
   letter-spacing: 0.02em;
 }
 
-.header-page .address-list-top:not(:last-child) {
-  margin-right: 30px;
-}
-
 .header-page {
   border-bottom: 1px solid #ececec;
 }
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    flex-direction: row;
+    margin-left: 88px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
+  }
 }
 
 .site-nav .link {
   display: block;
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding: 8px 0px;
   color: #212121;
   font-family: Roboto;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: 0.02em;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -117,8 +195,31 @@ nav {
   color: #2196f3;
 }
 
-.site-nav li:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .site-nav .link {
+    padding: 32px 0px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav .link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav li:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .top {
@@ -150,10 +251,49 @@ nav {
 
 .header-page .contact {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-page .contact {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-page .contact {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.header-page .contact li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-page .contact li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-page .contact li:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 30px;
+  }
 }
 
 .header-page .address {
   margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header-page .address {
+    margin-right: 0px;
+  }
 }
 
 .contact .icon-envelope {
@@ -191,6 +331,7 @@ nav {
 
 .logo {
   color: #000000;
+  font-size: 24px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -198,12 +339,6 @@ nav {
 
 .logo:hover {
   color: #2196f3;
-}
-
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .logo {
-    font-size: 24px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -220,18 +355,58 @@ nav {
   color: #ffffff;
 }
 
+.hero {
+  max-width: 480px;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(47, 48, 58, 0.4);
+  background-image: url("../images/images-hero/overlay-mobile.png"), url("../images/images-hero/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/images-hero/overlay-mobile@2x.png"), url("../images/images-hero/hero-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    max-height: 600px;
+    background-image: url("../images/images-hero/overlay-tablet.png"), url("../images/images-hero/hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/images-hero/overlay-tablet@2x.png"), url("../images/images-hero/hero-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    background-image: url("../images/images-hero/overlay-desktop.png"), url("../images/images-hero/hero-desktop.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/images-hero/overlay-desktop@2x.png"), url("../images/images-hero/hero-desktop@2x.jpg");
+  }
+}
+
 .hero .container {
+  padding-top: 118px;
+  padding-bottom: 118px;
   letter-spacing: 0.06em;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 480px) {
-  .hero .container {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -245,13 +420,8 @@ nav {
   margin-top: 0px;
   margin-bottom: 30px;
   font-weight: 900;
-}
-
-@media screen and (min-width: 480px) {
-  .hero-title {
-    font-size: 26px;
-    line-height: 42px;
-  }
+  font-size: 26px;
+  line-height: 42px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -294,19 +464,14 @@ nav {
   position: absolute;
   left: 50%;
   top: 50%;
+  min-width: 450px;
+  height: 609px;
   transform: translate(-50%, -50%) scale(1);
   padding: 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background: #ffffff;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .modal {
-    min-width: 450px;
-    height: 609px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -347,6 +512,7 @@ nav {
   display: block;
   height: 40px;
   padding: 14px 42px;
+  width: 370px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
@@ -355,12 +521,6 @@ nav {
 
 .form-modal .form-field input:focus {
   border: 1px solid #2196f3;
-}
-
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .form-modal .form-field input {
-    width: 370px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -387,6 +547,7 @@ textarea {
   height: 120px;
   padding: 12px 16px;
   resize: none;
+  width: 370px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-weight: 400;
@@ -408,12 +569,6 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  textarea {
-    width: 370px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   textarea {
     width: 448px;
@@ -431,13 +586,8 @@ textarea::placeholder {
   font-weight: 400;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .form-field-policy .policy-label {
-    font-size: 12px;
-    line-height: 14px;
-  }
+  font-size: 12px;
+  line-height: 14px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -483,12 +633,7 @@ textarea::placeholder {
   line-height: 23px;
   letter-spacing: 0.03em;
   color: #212121;
-}
-
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .modal-form-title {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .form-checkbox {
@@ -547,13 +692,27 @@ textarea::placeholder {
 @media screen and (min-width: 768px) {
   .advantages {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
 
+.advantages li {
+  max-width: 450px;
+  max-height: 226px;
+}
+
 @media screen and (min-width: 768px) {
   .advantages li {
-    width: 50%;
+    width: 354px;
+    height: 261px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages li {
+    width: 270px;
+    height: 251px;
   }
 }
 
@@ -573,15 +732,16 @@ textarea::placeholder {
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .advantages .section-title {
-    text-align: center;
+    text-align: start;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .advantages li:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -599,11 +759,9 @@ textarea::placeholder {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .container .advantages {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+.container .advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -655,8 +813,6 @@ textarea::placeholder {
 
 .section .works {
   display: none;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -672,11 +828,6 @@ textarea::placeholder {
 
 .work li {
   position: relative;
-}
-
-.works {
-  padding-right: 0px;
-  padding-left: 0px;
 }
 
 .works .list {
@@ -885,17 +1036,14 @@ textarea::placeholder {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .clients .container {
-    padding-top: 44px;
-    padding-bottom: 60px;
-  }
+.clients .container {
+  padding-top: 44px;
+  padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .clients .container {
     padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 
@@ -916,6 +1064,8 @@ textarea::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 210px;
+  height: 90px;
   background-color: #ffffff;
   border: 2px solid #afb1b8;
   border-radius: 4px;
@@ -926,24 +1076,15 @@ textarea::placeholder {
   border: 2px solid #2196f3;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .clients .list a {
-    width: 210px;
-    height: 90px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .clients .list a {
     width: 226px;
-    height: 90px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients .list a {
     width: 170px;
-    height: 90px;
   }
 }
 

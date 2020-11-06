@@ -1,165 +1,76 @@
-// .menu-mobile svg {
-//   width: 40px;
-//   height: 40px;
-//   fill: $text-title;
-// }
+.header-page {
+  position: relative;
+}
 
-// .menu-mobile:hover svg {
-//   fill: $text-accent;
-// }
-
-// .header-page {
-//   min-height: 60px;
-//   outline: 2px solid black;
-// }
-
-// nav {
-//   display: flex;
-//   align-items: center;
-
-//   @media screen and (min-width: 480px) and (max-width: 767px) {
-//     justify-content: space-between;
-//   }
-// }
-
-// .menu-button {
-//   display: inline-block;
-//   margin: 0px;
-//   padding: 0px;
-//   border: none;
-//   background-color: transparent;
-// }
-
-// .header-page > .container {
-//   display: flex;
-// }
-
-// .header-page .address .link {
-//   color: $main-text;
-//   font-size: 14px;
-//   letter-spacing: 0.02em;
-// }
-
-// .header-page .address-list-top:not(:last-child) {
-//   margin-right: 30px;
-// }
-
-// .header-page {
-//   border-bottom: 1px solid #ececec;
-// }
-
-// .site-nav {
-//   display: none;
-//   //   display: flex;
-//   margin-left: 93px;
-//   padding-left: 0px;
-//   margin-top: 0px;
-//   margin-bottom: 0px;
-// }
-
-// .site-nav .link {
-//   display: block;
-//   padding-bottom: 32px;
-//   padding-top: 32px;
-
-//   color: $text-title;
-//   font-family: Roboto;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 16px;
-//   letter-spacing: 0.02em;
-
-//   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     color: $text-accent;
-//   }
-// }
-
-// .site-nav li:not(:last-child) {
-//   margin-right: 50px;
-// }
-
-// .top {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .site-nav,
-// .contact {
-//   letter-spacing: 0.02em;
-// }
-
-// .site-nav .current {
-//   color: $text-accent;
-//   position: relative;
-
-//   &::after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     left: 0px;
-//     bottom: 0px;
-//     width: 100%;
-//     height: 4px;
-//     background-color: $text-accent;
-//     border-radius: 2px;
-//   }
-// }
-
-// .header-page .contact {
-//   display: flex;
-// }
-
-// .header-page .address {
-//   display: none;
-//   margin-left: auto;
-// }
-
-// .contact .icon-envelope {
-//   width: 16px;
-//   height: 12px;
-//   fill: $main-text;
-// }
-
-// .contact .icon-smartphone {
-//   width: 10px;
-//   height: 16px;
-//   fill: $main-text;
-// }
-
-// .address-list-top svg {
-//   margin-right: 10px;
-
-//   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .address-list-top .link {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     color: $text-accent;
-//   }
-// }
-
-// .address-list-top .link:hover svg,
-// .address-list-top .link:focus svg {
-//   fill: $text-accent;
-// }
-
-nav {
+.header-page nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 .header-page > .container {
   display: flex;
+}
+
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  margin-left: 276px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+
+.menu-button .icon-close-btn {
+  display: none;
+}
+
+.is-open .icon-close-btn {
+  display: block;
+}
+
+.is-open .icon-menu-btn {
+  display: none;
+}
+
+.menu-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  padding: 60px 0px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 400px;
+
+  background-color: $main-bg-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  @media screen and (min-width: 767px) {
+    position: static;
+    flex-direction: row;
+    padding: 0px;
+    height: 80px;
+    box-shadow: none;
+  }
+}
+
+.is-open .menu-nav {
+  display: block;
 }
 
 .header-page .address .link {
@@ -168,32 +79,38 @@ nav {
   letter-spacing: 0.02em;
 }
 
-.header-page .address-list-top:not(:last-child) {
-  margin-right: 30px;
-}
-
 .header-page {
   border-bottom: 1px solid #ececec;
 }
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @media screen and(min-width:768px) {
+    flex-direction: row;
+    margin-left: 88px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  @media screen and(min-width:1200px) {
+    margin-left: 93px;
+  }
 }
 
 .site-nav .link {
   display: block;
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding: 8px 0px;
 
   color: $text-title;
   font-family: Roboto;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: 0.02em;
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -202,10 +119,29 @@ nav {
   &:focus {
     color: $text-accent;
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
-.site-nav li:not(:last-child) {
-  margin-right: 50px;
+@media screen and (max-width: 767px) {
+  .site-nav li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav li:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .top {
@@ -237,10 +173,39 @@ nav {
 
 .header-page .contact {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.header-page .contact li:not(:last-child) {
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and(min-width:1200px) {
+    margin-bottom: 0px;
+    margin-right: 30px;
+  }
 }
 
 .header-page .address {
   margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 0px;
+  }
 }
 
 .contact .icon-envelope {

@@ -1,7 +1,5 @@
 .section .works {
   display: none;
-  padding-left: 15px;
-  padding-right: 15px;
 
   @media screen and (min-width: 1200px) {
     display: block;
@@ -15,11 +13,6 @@
 
 .work li {
   position: relative;
-}
-
-.works {
-  padding-right: 0px;
-  padding-left: 0px;
 }
 
 .works .list {

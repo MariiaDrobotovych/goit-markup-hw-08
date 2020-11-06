@@ -14,22 +14,15 @@
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .clients .container {
-    padding-top: 44px;
-    padding-bottom: 60px;
-  }
-}
+.clients .container {
+  padding-top: 44px;
+  padding-bottom: 60px;
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .clients .container {
+  @media screen and (min-width: 768px) {
     padding-top: 60px;
-    padding-bottom: 60px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .clients .container {
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -45,6 +38,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 210px;
+  height: 90px;
 
   background-color: $main-bg-color;
   border: 2px solid #afb1b8;
@@ -56,26 +51,13 @@
   &:hover {
     border: 2px solid $text-accent;
   }
-}
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .clients .list a {
-    width: 210px;
-    height: 90px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .clients .list a {
+  @media screen and (min-width: 768px) {
     width: 226px;
-    height: 90px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .clients .list a {
+  @media screen and (min-width: 1200px) {
     width: 170px;
-    height: 90px;
   }
 }
 
